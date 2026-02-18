@@ -6,7 +6,7 @@ http
   .createServer((req, res) => {
     console.log(`${req.method} ${req.url}`);
     res.writeHead(200, { "Content-Type": "text/plain" });
-    res.end("Hello from node-sdk-example!\n");
+    res.end("Hello from ngrok-js!\n");
   })
   .listen(8080, () => console.log("Server listening on port 8080"));
 
