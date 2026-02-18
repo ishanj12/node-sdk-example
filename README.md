@@ -30,6 +30,7 @@ NGROK_AUTHTOKEN=<token> node index.js
        authtoken_from_env: true,
      });
      console.log(`Ingress established at: ${listener.url()}`);
+     return listener;
    }
    ```
 
