@@ -19,7 +19,13 @@ NGROK_AUTHTOKEN=<token> node index.js
    npm install @ngrok/ngrok
    ```
 
-2. Add the following to your app:
+2. Set your authtoken:
+
+   ```sh
+   export NGROK_AUTHTOKEN=<token>
+   ```
+
+3. Add the following to your app:
 
    ```js
    const ngrok = require("@ngrok/ngrok");
