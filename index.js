@@ -7,7 +7,7 @@ const server = http.createServer((req, res) => {
   res.end("Hello from ngrok-js!\n");
 });
 
-(async function () {
-  await ngrok.listen(server);
-  console.log(`Ingress established at: ${server.listener.url()}`);
-})();
+server.listen(8080, async () => {
+  const listener = await ngrok.forward({ addr: 8080, authtoken_from_env: true });
+  console.log(`Ingress established at: ${listener.url()}`);
+});
