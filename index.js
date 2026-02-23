@@ -29,7 +29,11 @@ async function startNgrok() {
     // Uncomment below to require visitors to log in with Google before
     // accessing your app. No OAuth app setup needed — ngrok handles it.
     // https://ngrok.com/docs/traffic-policy/actions/oauth/
-    // oauth_provider: "google",
+    // traffic_policy: JSON.stringify({
+    //   on_http_request: [
+    //     { actions: [{ type: "oauth", config: { provider: "google" } }] },
+    //   ],
+    // }),
   });
   console.log(`Listening on: ${listener.url()}`);
 }
