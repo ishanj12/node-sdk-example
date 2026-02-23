@@ -1,6 +1,6 @@
 # node-sdk-example
 
-A minimal HTTP server using the [ngrok Node.js SDK](https://github.com/ngrok/ngrok-javascript) (`@ngrok/ngrok`).
+This example application starts a hello world HTTP server on port 8085 and then uses the [ngrok Node.js SDK](https://github.com/ngrok/ngrok-javascript) (`@ngrok/ngrok`) to forward public traffic to that server. When you run it, you'll get a public URL that anyone can use to access your app.
 
 ## Clone and Run
 
