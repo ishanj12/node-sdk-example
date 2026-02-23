@@ -20,14 +20,11 @@ async function startNgrok() {
     addr: 8085,
     authtoken_from_env: true,
 
-    // Uncomment below to load balance across multiple instances of your app.
-    // Run this script on multiple machines with the same domain to create a pool.
-    // https://ngrok.com/docs/universal-gateway/endpoint-pooling/
+    // Load balance across multiple instances: https://ngrok.com/docs/universal-gateway/endpoint-pooling/
     // domain: "your-domain.ngrok.app",
     // pooling_enabled: true,
 
-    // Uncomment below to require visitors to log in with Google before accessing your app. 
-    // https://ngrok.com/docs/traffic-policy/actions/oauth/
+    // Require Google login: https://ngrok.com/docs/traffic-policy/actions/oauth/
     // traffic_policy: JSON.stringify({
     //   on_http_request: [
     //     { actions: [{ type: "oauth", config: { provider: "google" } }] },
