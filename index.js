@@ -8,13 +8,13 @@ function startServer() {
     res.end("Hello from ngrok-js!\n");
   });
 
-  server.listen(8001, () => {
-    console.log("Server listening on port 8001");
+  server.listen(8085, () => {
+    console.log("Server listening on port 8085");
   });
 }
 
 async function startNgrok() {
-  const listener = await ngrok.forward({ addr: 8001, authtoken_from_env: true });
+  const listener = await ngrok.forward({ addr: 8085, authtoken_from_env: true });
   console.log(`Ingress established at: ${listener.url()}`);
 }
 
