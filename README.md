@@ -35,7 +35,7 @@ NGROK_AUTHTOKEN=<token> node index.js
        addr: "localhost:8085",
        authtoken_from_env: true,
      });
-     console.log(`Ingress established at: ${listener.url()}`);
+     console.log(`Listening on: ${listener.url()}`);
    }
    ```
 

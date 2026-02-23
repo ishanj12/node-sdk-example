@@ -31,7 +31,7 @@ async function startNgrok() {
     // https://ngrok.com/docs/traffic-policy/actions/oauth/
     // oauth_provider: "google",
   });
-  console.log(`Ingress established at: ${listener.url()}`);
+  console.log(`Listening on: ${listener.url()}`);
 }
 
 async function main() {
