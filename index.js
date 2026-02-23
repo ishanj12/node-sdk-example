@@ -26,8 +26,7 @@ async function startNgrok() {
     // domain: "your-domain.ngrok.app",
     // pooling_enabled: true,
 
-    // Uncomment below to require visitors to log in with Google before
-    // accessing your app. No OAuth app setup needed — ngrok handles it.
+    // Uncomment below to require visitors to log in with Google before accessing your app. 
     // https://ngrok.com/docs/traffic-policy/actions/oauth/
     // traffic_policy: JSON.stringify({
     //   on_http_request: [
