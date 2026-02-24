@@ -20,7 +20,8 @@ async function connectNgrok() {
     addr: 8085,
     authtoken_from_env: true,
 
-    // Use a custom domain: https://dashboard.ngrok.com/domains
+    // Uncomment below to use a specific domain.
+    // https://dashboard.ngrok.com/domains
     // domain: "your-domain.ngrok.app",
 
     // Uncomment below to load balance across multiple instances of your app.
