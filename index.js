@@ -15,15 +15,13 @@ function startServer() {
   });
 }
 
-async function startNgrok() {
+async function connectNgrok() {
   const listener = await ngrok.forward({
     addr: 8085,
     authtoken_from_env: true,
 
     // Uncomment below to load balance across multiple instances of your app.
-    // Run this script on multiple machines with the same domain to create a pool.
     // https://ngrok.com/docs/universal-gateway/endpoint-pooling/
-    // domain: "your-domain.ngrok.app",
     // pooling_enabled: true,
 
     // Uncomment below to require visitors to log in with Google before accessing your app. 
@@ -39,7 +37,7 @@ async function startNgrok() {
 
 async function main() {
   startServer();
-  await startNgrok();
+  await connectNgrok();
 }
 
 main();
