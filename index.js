@@ -32,7 +32,7 @@ async function connectNgrok() {
     //   ],
     // }),
   });
-  console.log(`Listening on: ${listener.url()}`);
+  console.log(`Available at: ${listener.url()}`);
 }
 
 async function main() {
