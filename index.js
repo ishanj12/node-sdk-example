@@ -16,13 +16,13 @@ function startServer() {
 }
 
 async function connectNgrok() {
-  const listener = await ngrok.forward({
+  const forwarder = await ngrok.forward({
     addr: 8085,
     authtoken_from_env: true,
 
     // Uncomment below to use a specific domain.
     // https://dashboard.ngrok.com/domains
-    // domain: "<your_domain_here>",
+    // domain: "customer1-aiwork.ngrok.app",
 
     // Uncomment below to load balance across multiple instances of your app.
     // https://ngrok.com/docs/universal-gateway/endpoint-pooling/
@@ -36,7 +36,7 @@ async function connectNgrok() {
     //   ],
     // }),
   });
-  console.log(`Available at: ${listener.url()}`);
+  console.log(`Available at: ${forwarder.url()}`);
 }
 
 async function main() {

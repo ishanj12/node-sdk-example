@@ -25,15 +25,15 @@ NGROK_AUTHTOKEN=<token> node index.js
    const ngrok = require("@ngrok/ngrok");
 
    async function forwardToApp() {
-     const listener = await ngrok.forward({
+     const forwarder = await ngrok.forward({
        addr: "localhost:8085",
        authtoken_from_env: true,
      });
-     console.log(`Available at: ${listener.url()}`);
+     console.log(`Available at: ${forwarder.url()}`);
    }
    ```
 
-3. Set your authtoken:
+3. Set your authtoken and restart your app:
 
    ```sh
    export NGROK_AUTHTOKEN=<token>
