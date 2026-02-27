@@ -22,7 +22,7 @@ async function connectNgrok() {
 
     // Uncomment below to use a specific domain.
     // https://dashboard.ngrok.com/domains
-    // domain: "customer1-aiwork.ngrok.app",
+    // domain: "hello-world.your-domain.com",
 
     // Uncomment below to load balance across multiple instances of your app.
     // https://ngrok.com/docs/universal-gateway/endpoint-pooling/
